@@ -27,12 +27,16 @@ public class formulario1_1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         nombre = new javax.swing.JLabel();
         contrasenhaInput = new javax.swing.JTextField();
         contrasenha = new javax.swing.JLabel();
         nombreInput = new javax.swing.JTextField();
-        envio = new javax.swing.JButton();
+        btnRegister = new javax.swing.JButton();
+        envio2 = new javax.swing.JButton();
+
+        jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -46,11 +50,19 @@ public class formulario1_1 extends javax.swing.JFrame {
         contrasenha.setForeground(new java.awt.Color(255, 255, 255));
         contrasenha.setText("PASSWORD");
 
-        envio.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        envio.setText("SEND");
-        envio.addActionListener(new java.awt.event.ActionListener() {
+        btnRegister.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnRegister.setText("SEND");
+        btnRegister.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                envioActionPerformed(evt);
+                btnRegisterActionPerformed(evt);
+            }
+        });
+
+        envio2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        envio2.setText("REGISTER");
+        envio2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                envio2ActionPerformed(evt);
             }
         });
 
@@ -68,12 +80,14 @@ public class formulario1_1 extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(envio, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(86, 86, 86))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(nombre)
-                        .addGap(95, 95, 95))))
+                    .addComponent(envio2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addComponent(nombre)
+                            .addGap(95, 95, 95))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addComponent(btnRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(76, 76, 76)))))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                     .addContainerGap(61, Short.MAX_VALUE)
@@ -89,9 +103,11 @@ public class formulario1_1 extends javax.swing.JFrame {
                 .addComponent(contrasenha)
                 .addGap(18, 18, 18)
                 .addComponent(contrasenhaInput, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(98, 98, 98)
-                .addComponent(envio, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(132, Short.MAX_VALUE))
+                .addGap(101, 101, 101)
+                .addComponent(btnRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(envio2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(85, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(140, 140, 140)
@@ -113,7 +129,7 @@ public class formulario1_1 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void envioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_envioActionPerformed
+    private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
         formulario1_0 formDestino = new formulario1_0();
         formDestino.setVisible(true);
         this.setVisible(false);
@@ -121,7 +137,14 @@ public class formulario1_1 extends javax.swing.JFrame {
         
         formulario1_0.recibir1.setText(nombreInput.getText());
         formulario1_0.recibir2.setText(contrasenhaInput.getText());
-    }//GEN-LAST:event_envioActionPerformed
+    }//GEN-LAST:event_btnRegisterActionPerformed
+
+    private void envio2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_envio2ActionPerformed
+        formularioRegister formDestino = new formularioRegister();
+        formDestino.setVisible(true);
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_envio2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -159,9 +182,11 @@ public class formulario1_1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnRegister;
     private javax.swing.JLabel contrasenha;
     private javax.swing.JTextField contrasenhaInput;
-    private javax.swing.JButton envio;
+    private javax.swing.JButton envio2;
+    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel nombre;
     private javax.swing.JTextField nombreInput;
